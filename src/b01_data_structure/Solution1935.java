@@ -24,7 +24,11 @@ public class Solution1935 {
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             if(Character.isAlphabetic(c)){
-                int idx = Character.getNumericValue(c) - Character.getNumericValue('A');
+//              int idx = Character.getNumericValue(c) - Character.getNumericValue('A');
+
+                // char끼리 바로 빼기 가능
+                int idx = c - 'A';
+
                 st.push((double) arr[idx]);
                 continue;
             }
