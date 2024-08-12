@@ -1,4 +1,4 @@
-// 후위 표기식2
+// 후위 표기식2 (실버3)
 
 package src.b01_data_structure;
 
@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Stack;
 
+// 시간복잡도: O(n)
 public class Solution1935 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
