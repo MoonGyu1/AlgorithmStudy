@@ -15,10 +15,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 // 점화식
-// dp[i] = max(dp[i-1], dp[i-2] + a[i], dp[i-3] + a[i-1] + a[i]) <==> max(OOX, OXO, XOO) (i >= 3)
-// dp[i] = a[i] (i = 1)
-// dp[i] = a[i-1] + a[i] (i = 2)
-// dp[i] = max(dp[i-1], dp[i-2] + a[i], a[i-1] + a[i]) (i == 3)
+// dp1[i] = max(dp1[i-1], dp1[i-2] + a[i], dp1[i-3] + a[i-1] + a[i]) <==> max(OOX, OXO, XOO) (i >= 3)
+// dp1[i] = a[i] (i = 1)
+// dp1[i] = a[i-1] + a[i] (i = 2)
+// dp1[i] = max(dp1[i-1], dp1[i-2] + a[i], a[i-1] + a[i]) (i == 3)
 
 // 시간복잡도: O(n)
 public class Solution2156 {
@@ -27,7 +27,7 @@ public class Solution2156 {
 
         int n = Integer.parseInt(br.readLine());
         int[] amount = new int[n];
-        int[] dp = new int[n];
+        int[] dp1 = new int[n];
 
         for(int i = 0; i < n; i++) {
             amount[i] = Integer.parseInt(br.readLine());
@@ -35,21 +35,21 @@ public class Solution2156 {
 
         for(int i = 0; i < n; i++) {
             if(i == 0){
-                dp[i] = amount[0];
+                dp1[i] = amount[0];
                 continue;
             }
             if(i == 1){
-                dp[i] = amount[0] + amount[1];
+                dp1[i] = amount[0] + amount[1];
                 continue;
             }
             if(i == 2){
-                dp[i] = Math.max(Math.max(dp[1], amount[0] + amount[2]), amount[1] + amount[2]); // max(a[0]+a[1], a[0]+a[2], a[1]+a[2])
+                dp1[i] = Math.max(Math.max(dp1[1], amount[0] + amount[2]), amount[1] + amount[2]); // max(a[0]+a[1], a[0]+a[2], a[1]+a[2])
                 continue;
             }
 
-            dp[i] = Math.max(dp[i-1], Math.max(dp[i-2] + amount[i], dp[i-3] + amount[i-1] + amount[i]));
+            dp1[i] = Math.max(dp1[i-1], Math.max(dp1[i-2] + amount[i], dp1[i-3] + amount[i-1] + amount[i]));
         }
 
-        System.out.println(dp[n-1]);
+        System.out.println(dp1[n-1]);
     }
 }
