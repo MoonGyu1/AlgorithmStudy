@@ -1,6 +1,6 @@
 // 쇠막대기 (실버2)
 
-package src.b01_data_structure;
+package src.b00_data_structure;
 
 import java.util.Scanner;
 import java.util.Stack;

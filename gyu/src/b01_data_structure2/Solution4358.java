@@ -1,6 +1,6 @@
 // 생태학 (실버2)
 
-package src.b02_data_structure2;
+package src.b01_data_structure2;
 
 import java.io.*;
 import java.util.HashMap;

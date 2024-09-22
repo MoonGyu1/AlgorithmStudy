@@ -1,6 +1,6 @@
 // 이중 우선순위 큐 (골드4)
 
-package src.b02_data_structure2;
+package src.b01_data_structure2;
 
 import java.io.*;
 import java.util.*;

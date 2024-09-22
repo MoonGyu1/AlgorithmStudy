@@ -1,6 +1,6 @@
 // 후위 표기식2 (실버3)
 
-package src.b01_data_structure;
+package src.b00_data_structure;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,6 +1,6 @@
 // 데이터 체커 (골드4)
 
-package src.b01_data_structure;
+package src.b00_data_structure;
 
 import java.io.BufferedReader;
 import java.io.IOException;

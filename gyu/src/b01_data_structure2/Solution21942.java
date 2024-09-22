@@ -1,6 +1,6 @@
 // 부품 대여장 (골드2)
 
-package src.b02_data_structure2;
+package src.b01_data_structure2;
 
 import java.io.*;
 import java.time.Duration;
