@@ -9,9 +9,9 @@
 |  0   | [00] Data Structure                    | 1935, 10799, 22942 |    -     |
 |      | [01] Data Structure 2                  | 4358, 7662, 21942  |    -     |
 |      | [05] Dynamic Programming 1             | 2156, 9465, 21317  |    -     |
-|  1   | [02] Tree                              |                    | 09/29(일) |
-|      | [03] Math                              |                    |    -     |
-|      | [04] Greedy                            |                    |    -     |
+|  1   | [02] Tree                              | 1991, 17073, 3584  | 09/29(일) |
+|      | [03] Math                              | 21275, 1747, 22943 |    -     |
+|      | [04] Greedy                            |  1931, 1092, 2212  |    -     |
 |      | [06] Dynamic Programming 2             |                    |    -     |
 |      | [07] Two Pointer	                      |                    |    -     |
 |      | [08] Implementation                    |                    |    -     |
