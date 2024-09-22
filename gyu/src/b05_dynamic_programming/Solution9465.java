@@ -15,7 +15,7 @@ import java.util.StringTokenizer;
 // dp[1][i] += max(dp[0][i-1], dp[0][i-2])
 
 // 시간복잡도: O(n)
-public class Solution9456 {
+public class Solution9465 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
