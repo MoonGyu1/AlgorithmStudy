@@ -12,9 +12,9 @@
 |  1   | [02] Tree                              | 1991, 17073, 3584  | 09/29(일) |
 |      | [03] Math                              | 21275, 1747, 22943 |    -     |
 |      | [04] Greedy                            |  1931, 1092, 2212  |    -     |
-|      | [06] Dynamic Programming 2             |                    |    -     |
-|      | [07] Two Pointer	                      |                    |    -     |
-|      | [08] Implementation                    |                    |    -     |
+|      | [06] Dynamic Programming 2             | 9251, 15724, 3687  |    -     |
+|      | [07] Two Pointer	                      | 20922, 21921, 3151 |    -     |
+|      | [08] Implementation                    | 20546, 4396, 20207 |    -     |
 |  2   | [09] Graph Traversal                   |                    | 10/06(일) |
 |      | [10] Brute Force                       |                    |    -     |
 |      | [11] Simulation                        |                    |    -     |
