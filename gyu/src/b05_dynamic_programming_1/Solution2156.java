@@ -8,7 +8,7 @@
 // 3. 점화식 만들기
 // 4. 메모하기: top-down(Memoization, 재귀), bottom-up(Tabulation, 반복문)
 // 5. 바닥 조건 구하기
-package src.b05_dynamic_programming;
+package src.b05_dynamic_programming_1;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,6 +1,6 @@
 // 징검다리 건너기 (실버1)
 
-package src.b05_dynamic_programming;
+package src.b05_dynamic_programming_1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
