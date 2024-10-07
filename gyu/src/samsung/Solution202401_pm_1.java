@@ -7,7 +7,7 @@ import java.io.*;
 
 // 유형: 시뮬레이션, BFS(DFS)
 // 중요: 격자 탐색 시 범위 벗어나는지 체크하는 부분 경계값 주의
-public class Solution202401_am_1 {
+public class Solution202401_pm_1 {
     static int r, c, k;
     static int[][] map;
     static int[][] isExit;

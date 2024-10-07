@@ -5,7 +5,7 @@ package src.samsung;
 import java.util.*;
 import java.io.*;
 
-public class Solution202401_am_2 {
+public class Solution202401_pm_2 {
     static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
     static HashMap<Integer, Node> nodes = new HashMap<>();
 
