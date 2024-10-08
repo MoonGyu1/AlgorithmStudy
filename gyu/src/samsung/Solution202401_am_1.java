@@ -1,3 +1,5 @@
+// 고대 문명 유적 탐사 (골드4)
+
 package src.samsung;
 
 import java.io.*;
