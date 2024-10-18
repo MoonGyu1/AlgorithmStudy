@@ -19,7 +19,7 @@
 |      | [10] Brute Force                   |                    |    -     |
 |      | [11] Simulation                    |       20665*       |    -     |
 |      | [12] Binary Search                 |                    |    -     |
-|      | [13] Backtracking                  |       14888        |    -     |
+|      | [13] Backtracking                  | 14888, 3980, 2661  |    -     |
 |      | [14] Divide and conquer            |                    |    -     |
 |  3   | [15] Prefix Sum                    |                    | 10/13(일) |
 |      | [16] String                        |       17609        |    -     |
