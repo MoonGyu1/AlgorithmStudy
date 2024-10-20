@@ -12,19 +12,19 @@ for i, _ in enumerate(circles):
 # METHOD 1
 points = []
 for i, circle in enumerate(circles):
-    points.append((circle[0] - circle[1], i+1))
-    points.append((circle[0] + circle[1], -i-1))
+    points.append((circle[0] - circle[1], -i-1))
+    points.append((circle[0] + circle[1], i+1))
 
-points = sorted(points, key=lambda x: x[0])
+points = sorted(points)
 stack = []
 for point in points:
-    if point[1] < 0:
+    if point[1] > 0: # Right
         if stack[-1] == -point[1]:
             stack.pop()
         else:
             print("NO")
             break
-    else:
+    else: # Left
         stack.append(point[1])
 else:
     print("YES")

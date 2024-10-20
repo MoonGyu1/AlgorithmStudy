@@ -3,8 +3,8 @@ import sys, math, queue
 def primetest(n):
     for p in range(2, math.floor(math.sqrt(n) + 1)):
         if n % p == 0:
-            return False
-    return True
+            return True
+    return False
 
 def digits_to_number(dg):
     n = 0
