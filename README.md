@@ -9,7 +9,7 @@
 |  0   | [00] Data Structure                | 1935, 10799, 22942 |   ✅    |
 |      | [01] Data Structure 2              | 4358, 7662, 21942  |   ✅    |
 |      | [05] Dynamic Programming 1         | 2156, 9465, 21317  |   ✅    |
-|  1   | [02] Tree                          | 1991, 17073, 3584  |   -    |
+|  1   | [02] Tree                          | 1991, 17073, 3584  |   ✅    |
 |      | [03] Math                          | 21275, 1747, 22943 |   -    |
 |      | [04] Greedy                        |  1931, 1092, 2212  |   -    |
 |      | [06] Dynamic Programming 2         | 15724, 9251, 3687  |   -    |
@@ -17,7 +17,7 @@
 |      | [08] Implementation                | 20546, 4396, 20207 |   -    |
 |  2   | [09] Graph Traversal               | 2667, 13549, 13023 |   ✅    |
 |      | [10] Brute Force                   | 2615, 21278, 21943 |   -    |
-|      | [11] Simulation                    |        1713        |   -    |
+|      | [11] Simulation                    | 1713, 15683, 13460 |   -    |
 |      | [12] Binary Search                 |                    |   -    |
 |      | [13] Backtracking                  | 14888, 3980, 2661  |   -    |
 |      | [14] Divide and conquer            |                    |   -    |
