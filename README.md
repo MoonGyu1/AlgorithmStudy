@@ -18,7 +18,7 @@
 |  2   | [09] Graph Traversal               | 2667, 13549, 13023 |   ✅    |
 |      | [10] Brute Force                   | 2615, 21278, 21943 |   -    |
 |      | [11] Simulation                    | 1713, 15683, 13460 |   -    |
-|      | [12] Binary Search                 |                    |   -    |
+|      | [12] Binary Search                 |        3079        |   -    |
 |      | [13] Backtracking                  | 14888, 3980, 2661  |   -    |
 |      | [14] Divide and conquer            |                    |   -    |
 |  3   | [15] Prefix Sum                    |                    |   -    |
