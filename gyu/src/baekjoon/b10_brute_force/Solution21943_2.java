@@ -3,7 +3,7 @@ package src.baekjoon.b10_brute_force;
 
 import java.util.Scanner;
 
-// 시간복잡도: O(n!)
+// 시간복잡도: O(n!) --> O((Q+1)^n)이 더 정확함 (각 숫자가 선택할 수 있는 가짓수가 Q+1개)
 public class Solution21943_2 {
     static int[] arr;
     static int max, N;
