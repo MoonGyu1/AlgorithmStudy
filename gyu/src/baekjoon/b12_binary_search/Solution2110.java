@@ -25,13 +25,17 @@ public class Solution2110 {
         }
         Collections.sort(homes); // O(nlogn) 보장, cf) Arrays.sort(): 평균 O(nlogn), 최악의 경우 O(n^2)
 
-        // last = (homes.get(homes.size() -1) - homes.get(0)) * 2; (특정 케이스에서 시간초과(무한루프) 발생)
         int first = 1, last = (homes.get(homes.size() -1) - homes.get(0));
+
+        // 주의: last가 아래와 같은 경우, while문 내에서 계산이 int 범위를 초과하게 됨 (약 30억) -> 무한 루프
+        // last = (homes.get(homes.size() -1) - homes.get(0)) * 2;
+
+        System.out.println(first + " " + last);
 
         // '공유기 사이의 최대 거리'에 대해 이분 탐색
         int ans = 1;
         while(first <= last) {
-            int mid = (first + last) / 2;
+            int mid = (first + last) / 2; // (first + last)는 초기 last 값보다 커질 수 있음 -> 자료형 주의
             boolean possible = isPossible(mid);
             if(possible) {
                 ans = Math.max(ans, mid);
