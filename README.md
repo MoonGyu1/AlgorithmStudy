@@ -2,7 +2,8 @@
 
 2024.08.09 ~
 
-* 참고 레포지토리: https://github.com/tony9402/baekjoon
+## [백준](https://github.com/tony9402/baekjoon)
+
 
 | week | chapter                            |         no         | review |
 |:----:|:-----------------------------------|:------------------:|:------:|
@@ -16,10 +17,10 @@
 |      | [07] Two Pointer	                  | 21921, 20922, 3151 |   -    |
 |      | [08] Implementation                | 20546, 4396, 20207 |   -    |
 |  2   | [09] Graph Traversal               | 2667, 13549, 13023 |   ✅    |
-|      | [10] Brute Force                   | 2615, 21278, 21943 |   -    |
-|      | [11] Simulation                    | 1713, 15683, 13460 |   -    |
-|      | [12] Binary Search                 |        3079        |   -    |
-|      | [13] Backtracking                  | 14888, 3980, 2661  |   -    |
+|      | [10] Brute Force                   | 2615, 21278, 21943 |   ✅    |
+|      | [11] Simulation                    | 1713, 15683, 13460 |   ✅    |
+|      | [12] Binary Search                 |  3079, 2110, 1300  |   -    |
+|      | [13] Backtracking                  | 14888, 3980, 2661  |        |
 |      | [14] Divide and conquer            |                    |   -    |
 |  3   | [15] Prefix Sum                    |                    |   -    |
 |      | [16] String                        |       17609        |   -    |
@@ -34,6 +35,16 @@
 > [21] Others는 참고 레포지토리 외 문제
 
 > *: 추천 문제가 아님
+
+<br>
+<br>
+
+## [Softeer](https://softeer.ai/practice)
+
+
+| day | level  |       no       | review |
+|:---:|:------:|:--------------:|:------:|
+|  1  |   2    | 바이러스, 연탄의 크기, X marks the Spot |       |
 
 
 
