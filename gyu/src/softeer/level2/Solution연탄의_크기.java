@@ -13,19 +13,19 @@ public class Solution연탄의_크기 {
         StringTokenizer st;
 
         int n = Integer.parseInt(br.readLine());
-        int[] firewall = new int[n];
+        int[] fireplace = new int[n];
 
         int maxL = 0; // 최대 연탄의 반지름의 길이
         st = new StringTokenizer(br.readLine());
         for(int i = 0; i < n; i++) {
-            firewall[i] = Integer.parseInt(st.nextToken());
-            maxL = Math.max(maxL, firewall[i]);
+            fireplace[i] = Integer.parseInt(st.nextToken());
+            maxL = Math.max(maxL, fireplace[i]);
         }
 
         int ans = 0;
         for(int i = 2; i <= maxL; i++) { // i: 연탄의 반지름
             int cnt = 0;
-            for(int f : firewall) { // f: 난로의 반지름
+            for(int f : fireplace) { // f: 난로의 반지름
                 if(f < i) continue;
                 if(f % i == 0) cnt++;
             }
