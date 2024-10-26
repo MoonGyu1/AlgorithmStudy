@@ -1,39 +1,35 @@
-import io, os
+import io, os, queue
 
 inp = io.BytesIO(os.read(0, os.fstat(0).st_size)).read().decode().split()
 N, C = int(inp[0]), int(inp[1])
 homes = sorted(list(map(int, inp[2:])))
-inp = None
 
-interval = (homes[-1] - homes[0]) / (C - 1)
+def binary_search (end):
 
-def search(val):
-    start, end = 0, len(homes) - 1
-    pivot = len(homes) // 2
+    def validate(interval):
+        threshold = 0
+        max_installations = 0
+        for home in homes:
+            if home >= threshold:
+                max_installations += 1
+                threshold = home + interval
+        return max_installations
 
-    while start < pivot and pivot < end:
+    start = 1
+    target = end // 2
 
-        if homes[start] == val:
-            return (val, val)
-        if homes[end] == val:
-            return (val, val)
-        if homes[pivot] == val:
-            return (val, val)
+    while start < target and target < end:
         
-        if homes[pivot] > val:
-            end = pivot
+        if validate(target) < C:
+            end = target
         else:
-            start = pivot
+            start = target
 
-        pivot = (end + start) // 2
-    
-    if homes[pivot] < val:
-        return (homes[pivot], homes[pivot + 1])
+        target = (start + end) // 2
+
+    if validate(end) < C:
+        return start
     else:
-        return (homes[pivot - 1], homes[pivot])
+        return end
 
-target = homes[0]
-for i in range(C - 2):
-    target += interval
-    l, r = search(target)
-    l
+print(binary_search(homes[-1]))
