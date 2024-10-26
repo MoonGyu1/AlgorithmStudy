@@ -2,6 +2,7 @@ import sys, itertools, collections
 
 N, integers, num_ops = sys.stdin.readlines()
 N = int(N)
+
 if N == 1:
     print(integers)
 else:
@@ -50,4 +51,5 @@ else:
                                 if new_val > results[i][new_key]:
                                     results[i][new_key] = new_val
 
+        print(results)
         print(next(iter(results[N].values())))

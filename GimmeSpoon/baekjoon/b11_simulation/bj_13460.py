@@ -68,6 +68,7 @@ while not q.empty():
 
     if cnt >= 10:
         continue
+    
     # Vertical Hittest
 
     if rr < br: # Red first for upward, Blue first for downward
