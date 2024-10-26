@@ -38,6 +38,8 @@ public class Solution3079 {
         binarySearch(0, maxTime);
 
         System.out.println(ans);
+
+        System.out.println((long)(Math.pow(10, 9) * (double) 100000));
     }
 
     static void binarySearch(long minT, long maxT) {
@@ -58,9 +60,8 @@ public class Solution3079 {
         long sum = 0;
         for(int i = 0; i < N; i++) {
             sum += t / time[i];
-            if(sum > M) break; // ?: 해당 부분 없으면 틀림
+            if(sum > M) break; // 해당 부분 없으면 오버플로우
         }
         return sum;
     }
-
 }
