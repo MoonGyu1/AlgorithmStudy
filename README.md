@@ -19,7 +19,7 @@
 |  2   | [09] Graph Traversal               | 2667, 13549, 13023 |   ✅    |
 |      | [10] Brute Force                   | 2615, 21278, 21943 |   ✅    |
 |      | [11] Simulation                    | 1713, 15683, 13460 |   ✅    |
-|      | [12] Binary Search                 |  3079, 2110, 1300  |   -    |
+|      | [12] Binary Search                 |  3079, 2110, 1300  |   ✅    |
 |      | [13] Backtracking                  | 14888, 3980, 2661  |        |
 |      | [14] Divide and conquer            |                    |   -    |
 |  3   | [15] Prefix Sum                    |                    |   -    |
@@ -42,9 +42,10 @@
 ## [Softeer](https://softeer.ai/practice)
 
 
-| day | level  |       no       | review |
-|:---:|:------:|:--------------:|:------:|
-|  1  |   2    | 바이러스, 연탄의 크기, X marks the Spot |       |
+| day | level |                             no                              | review |
+|:---:|:-----:|:-----------------------------------------------------------:|:------:|
+|  1  |   2   |               바이러스, 연탄의 크기, X marks the Spot                |   ✅    |
+|  2  |   3   |Pipelined, Hanyang Popularity Exceeding Competition, 함께하는 효도 |        |
 
 
 
