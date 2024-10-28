@@ -5,6 +5,7 @@ package src.baekjoon.b13_backtracking;
 import java.io.*;
 import java.util.StringTokenizer;
 
+// 시간복잡도: O((n-1)!)
 public class Solution14888 {
     static int N;
     static int[] num;
