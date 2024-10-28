@@ -44,8 +44,8 @@
 
 | day | level |                             no                              | review |
 |:---:|:-----:|:-----------------------------------------------------------:|:------:|
-|  1  |   2   |               바이러스, 연탄의 크기, X marks the Spot                |   ✅    |
-|  2  |   3   |Pipelined, Hanyang Popularity Exceeding Competition, 함께하는 효도 |        |
+|  1  |   2   |               [바이러스](https://softeer.ai/practice/6284), [연탄의 크기](https://softeer.ai/practice/7628), [X marks the Spot](https://softeer.ai/practice/7703)                |   ✅    |
+|  2  |   3   |[Pipelined](https://softeer.ai/practice/9496), [Hanyang Popularity Exceeding Competition](https://softeer.ai/practice/9495), [함께하는 효도](https://softeer.ai/practice/7727) |        |
 
 
 
