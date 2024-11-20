@@ -2,17 +2,6 @@ import sys, copy, queue
 
 N = int(sys.stdin.read())
 
-def lt(seq1:list, seq2:list):
-    if seq1 is None:
-        return False
-    if seq2 is None:
-        return True
-    for a, b in zip(seq1, seq2):
-        if a < b:
-            return True
-        if a > b:
-            return False
-
 q = queue.PriorityQueue()
 q.put((-1, 1, [1]))
 
