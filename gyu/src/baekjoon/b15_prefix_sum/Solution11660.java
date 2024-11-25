@@ -1,6 +1,6 @@
 // 구간 합 구하기 5 (실버1)
 
-package src.baekjoon.b14_divide_and_conquer;
+package src.baekjoon.b15_prefix_sum;
 
 import java.io.BufferedReader;
 import java.io.IOException;
