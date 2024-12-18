@@ -1,9 +1,11 @@
+// 크레인 인형뽑기 게임 (level1)
+
 package src.programmers.kakao_2019_internship;
 
 import java.util.*;
 
 // 시간복잡도: O(N^2 + M)
-public class Solution크레인_인형뽑기_게임 {
+public class Solution64061 {
 
 	public int solution(int[][] board, int[] moves) {
 		int N = board.length;
