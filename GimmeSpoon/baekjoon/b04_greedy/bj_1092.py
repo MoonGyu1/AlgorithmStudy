@@ -2,34 +2,32 @@ import sys, copy, heapq
 inp = sys.stdin.readlines()
 
 N = int(inp[0])
-cranes = list(map(lambda x: -int(x), inp[1].split()))
+cranes = sorted(list(map(lambda x: (0, -int(x)), inp[1].split())))
 M = int(inp[2])
-boxes = sorted(list(map(int, inp[3].split())))
+boxes = sorted(list(map(lambda x: -int(x), inp[3].split())))
 
-t = 1
-boxes = reversed(boxes)
-heapq.heapify(cranes)
+# Trivial Case
+if cranes[0][1] > boxes[0]:
+    print(-1)
+else:
 
-while True:
+    heapq.heapify(cranes)
 
-    leftover = []
-    capas = copy.deepcopy(cranes)
+    maxt = 0
 
     for box in boxes:
-        if len(capas) == 0:
-            leftover.append(box)
-            continue
-        capa = -heapq.heappop(capas)
-        if capa < box:
-            leftover.append(box)
-            heapq.heappush(capas, -capa)
+        t, capa = heapq.heappop(cranes)
+        if capa <= box:
+            heapq.heappush(cranes, (t + 1, capa))
+        else:
+            passed = []
+            while capa > box:
+                passed.append((t, capa))
+                t, capa = heapq.heappop(cranes)
+            heapq.heappush(cranes, (t + 1, capa))
+            for p in passed:
+                heapq.heappush(cranes, p)
+        if t + 1 > maxt:
+            maxt = t + 1
 
-    if len(leftover) == 0:
-        print(t)
-        break
-    elif len(capas) > 0 and capas[0] == cranes[0]:
-        print(-1)
-        break
-
-    boxes = leftover
-    t += 1
+    print(maxt)
