@@ -1,6 +1,6 @@
 // 두 개 뽑아서 더하기 (level1)
 
-package src.baekjoon.codingtest_java;
+package src.codingtest_java;
 
 import java.util.*;
 

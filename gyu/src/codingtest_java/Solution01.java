@@ -1,4 +1,4 @@
-package src.baekjoon.codingtest_java;
+package src.codingtest_java;
 
 import java.util.Arrays;
 

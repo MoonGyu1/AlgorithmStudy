@@ -1,6 +1,6 @@
 // 방문 길이 (level2)
 
-package src.baekjoon.codingtest_java;
+package src.codingtest_java;
 
 import java.util.HashMap;
 import java.util.HashSet;

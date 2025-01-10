@@ -1,6 +1,6 @@
 // 행렬의 곱셈 (level2)
 
-package src.baekjoon.codingtest_java;
+package src.codingtest_java;
 
 // 시간복잡도: O(N^3)
 class Solution05 {
