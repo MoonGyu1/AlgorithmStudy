@@ -1,38 +1,24 @@
-import sys, copy, queue
+import sys, collections
 
 inp = list(map(int, sys.stdin.read().split()))
+
 N, K = inp[0], inp[1]
-arr = inp[2:]
-values = {}
-k_exceeds = []
+seq = inp[2:]
 
-for i, v in enumerate(arr):
-    if v not in values:
-        values[v] = {
-            "count" : 1,
-            "indexes" : [i]
-        }
-    else:
-        values[v]["count"] += 1
-        values[v]["indexes"].append(i)
-        if values[v]["count"] > K:
-            k_exceeds.append(v)
+# counts = collections.Counter(seq)
+counts = collections.defaultdict(
+    lambda: {"num" : int(), "indexes" : list()})
+exceeds = []
 
-if len(k_exceeds) == 0:
-    print(N)
-else:
-    maxlen = 0
-    for i in range(0, N):
-        for j in range(N - 1, -1, -1):
-            for v in k_exceeds:
-                e = values[v]["count"] - K
-                for idx in values[v]["indexes"]:
-                    if idx < i or idx > j:
-                        e -= 1
-                    if e == 0:
-                        if j - i + 1 > maxlen:
-                            maxlen = j - i + 1
-                        break
-                else:
-                    continue
-    print(maxlen)
+for i, v in enumerate(seq):
+    counts[v]["num"] += 1
+    counts[v]["indexes"].append(i)
+    if counts[v]["num"] > K:
+        exceeds.append(v)
+
+i, j = 0, N - 1
+
+while len(exceeds) > 0:
+    i
+
+print(j - i + 1)
