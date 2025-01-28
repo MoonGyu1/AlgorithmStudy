@@ -3,7 +3,7 @@ package src.softeer.level3;
 import java.io.*;
 import java.util.*;
 
-// 시간복잡도: O(N*M)
+// 시간복잡도: O(N*M*루트(N^2+M^2))
 public class Solution동계_테스트_시점_예측 {
 	static int N, M;
 	static int[][] grid;
