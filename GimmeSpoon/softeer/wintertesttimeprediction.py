@@ -12,7 +12,6 @@ q = queue.PriorityQueue()
 q.put((0, 0, 0))
 
 maxt = 0
-melted = 0
 
 while not q.empty():
     
