@@ -1,19 +1,36 @@
 import sys
 
-inp = sys.stdin.read().split()
-N, M = int(inp[0]), int(inp[1])
-personalities = inp[2:]
+N, M = list(map(int, sys.stdin.readline().split()))
+personalities = [int(sys.stdin.readline(), 2) for _ in range(N)]
 
-n_friendlies = 0
-for i, p1 in enumerate(personalities[:-1]):
-    for p2 in personalities[i + 1:]:
-        d = 0
-        for c1, c2 in zip(p1, p2):
-            if c1 != c2:
-                d += 1
-            if d > 2:
-                break
+if N == 1:
+    print(0)
+elif M < 3:
+    print(N * (N - 1) // 2)
+else:
+    MASK = []
+    for i in range(M):
+        a = 1 << i
+        MASK.append(a)
+        for j in range(i + 1, M):
+            MASK.append(a | (1 << j))
+
+    relationships = {}
+
+    for personality in personalities:
+        if personality in relationships:
+            relationships[personality]["num"] += 1
         else:
-            n_friendlies += 1
-            
-print(n_friendlies)
+            relationships[personality] = {
+                "num" : 1,
+                "family" : set([personality ^ mask for mask in MASK]),
+            }
+
+    a, b = 0, 0
+    for v in relationships.values():
+        a += v["num"] * (v["num"] - 1) // 2
+        for neighbor in v["family"]:
+            if neighbor in relationships:
+                b += v["num"] * relationships[neighbor]["num"]
+
+    print(a + b // 2)
