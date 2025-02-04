@@ -3,6 +3,7 @@ package src.softeer.level3;
 import java.io.*;
 import java.util.*;
 
+// 시간복잡도: O(N^2) (visited 배열 없는 경우, O(3^T))
 public class Solution차세대_지능형_교통시스템_1 {
 	static HashSet<String> set = new HashSet<>(); // 방문한 교차로
 	static int N, T;
