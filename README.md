@@ -43,15 +43,18 @@
 ## [Softeer](https://softeer.ai/practice)
 
 
-| day | level |                                                                                                          no                                                                                                           |   review  |
-|:---:|:-----:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:---------:|
-|  1  |   2   |                                      [바이러스](https://softeer.ai/practice/6284), [연탄의 크기](https://softeer.ai/practice/7628), [X marks the Spot](https://softeer.ai/practice/7703)                                       |     ✅     |
-|  2  |   3   |                       [Pipelined](https://softeer.ai/practice/9496), [Hanyang Popularity Exceeding Competition](https://softeer.ai/practice/9495), [함께하는 효도](https://softeer.ai/practice/7727)                        |     ✅     |
-|  3  |   3   |                                                                [CPTI](https://softeer.ai/practice/11002), [우물 안 개구리](https://softeer.ai/practice/6289)                                                                |     ✅     |
-|  4  |   3   |                                                              [조립라인](https://softeer.ai/practice/6287), [동계 테스트 시점 예측](https://softeer.ai/practice/6281)                                                               |     ✅     |
-|  5  |   3   |                                                           [스마트물류](https://softeer.ai/practice/6279), [사물인식 최소 면적 산출 프로그램](https://softeer.ai/practice/6277)                                                           |     ✅     |
-|  6  |   3   |                                                            [Garage game](https://softeer.ai/practice/6276), [로봇이 지나간 경로](https://softeer.ai/practice/6275)                                                            |     ✅     |
-|  7  |   3   |                                                   [안전운전을 도와줄 차세대 지능형 교통시스템](https://softeer.ai/practice/6274), [택배 마스터 광우](https://softeer.ai/practice/6273)                                                     |           |
+| day | level |                                                                                    no                                                                                    |   review  |
+|:---:|:-----:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:---------:|
+|  1  |   2   |                [바이러스](https://softeer.ai/practice/6284), [연탄의 크기](https://softeer.ai/practice/7628), [X marks the Spot](https://softeer.ai/practice/7703)                |     ✅     |
+|  2  |   3   | [Pipelined](https://softeer.ai/practice/9496), [Hanyang Popularity Exceeding Competition](https://softeer.ai/practice/9495), [함께하는 효도](https://softeer.ai/practice/7727) |     ✅     |
+|  3  |   3   |                                         [CPTI](https://softeer.ai/practice/11002), [우물 안 개구리](https://softeer.ai/practice/6289)                                          |     ✅     |
+|  4  |   3   |                                        [조립라인](https://softeer.ai/practice/6287), [동계 테스트 시점 예측](https://softeer.ai/practice/6281)                                        |     ✅     |
+|  5  |   3   |                                    [스마트물류](https://softeer.ai/practice/6279), [사물인식 최소 면적 산출 프로그램](https://softeer.ai/practice/6277)                                     |     ✅     |
+|  6  |   3   |                                     [Garage game](https://softeer.ai/practice/6276), [로봇이 지나간 경로](https://softeer.ai/practice/6275)                                      |     ✅     |
+|  7  |   3   |                                [안전운전을 도와줄 차세대 지능형 교통시스템](https://softeer.ai/practice/6274), [택배 마스터 광우](https://softeer.ai/practice/6273)                                |    ✅        |
+|  8  |   3   |                                        [순서대로 방문하기](https://softeer.ai/practice/6246), [자동차 테스트](https://softeer.ai/practice/6247)                                        |    ✅        |
+|  8  |   3   |                                            [출퇴근길](https://softeer.ai/practice/6248), [염기서열 커버](https://softeer.ai/practice/6249)                                             |    ✅        |
+
 
 
 
