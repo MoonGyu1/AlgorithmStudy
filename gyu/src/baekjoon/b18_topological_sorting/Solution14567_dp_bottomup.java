@@ -9,13 +9,10 @@ import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 /**
- * DP Top-Down 방식
- * f(x) = 1 (len(prereq[x]) == 0)
- * f(x) = max(dp(pre) for pre in prereq[x]) + 1 (len(prerequ[x]) > 0)
+ * DP Bottom-Up 방식
  */
-
-// 시간복잡도: O(N+M)
-public class Solution14567_dp_topdown {
+// 시간복잡도: O()
+public class Solution14567_dp_bottomup {
 
 	static int N, M;
 	static ArrayList<Integer>[] prereq;
@@ -53,17 +50,7 @@ public class Solution14567_dp_topdown {
 	}
 
 	static int dp(int s) {
-		if(minSem[s] != 0) return minSem[s]; // 이미 해를 구한 경우
-		if(prereq[s].isEmpty()) return 1; // Base case
 
-		int max = 1;
-		for(int pre : prereq[s]) {
-			max = Math.max(max, dp(pre));
-		}
-
-		minSem[s] = max + 1;
-
-		return minSem[s];
 	}
 }
 
