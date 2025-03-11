@@ -26,7 +26,7 @@
 |  3   | [15] Prefix Sum                    | 21318, 20440, 1749, 2015 |   -    |
 |      | [16] String                        |          17609           |   -    |
 |      | [17] Shortest Path                 |    1916*, 1865, 11404    |   -    |
-|      | [18] Topological Sorting           |                          |   -    |
+|      | [18] Topological Sorting           |          14567           |    ✅    |
 |      | [19] Disjoint Set                  |                          |   -    |
 |      | [20] Minimum Spanning Tree(MST)    |                          |   -    |
 |  4   | [21] Trie                          |                          |   -    |
@@ -36,6 +36,17 @@
 > [21] Others는 참고 레포지토리 외 문제
 
 > *: 추천 문제가 아님
+
+<br>
+<br>
+
+## [프로그래머스](https://school.programmers.co.kr/learn/challenges?tab=algorithm_practice_kit)
+
+| day | problem                                                                                                                                                                                                                           | commit                        | review |
+|:---:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------|:------:|
+|  1  | [가장 큰 수](https://school.programmers.co.kr/learn/courses/30/lessons/42746), [소수 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/42839), [아이템 줍기](https://school.programmers.co.kr/learn/courses/30/lessons/87694)    | gyu [  ] <br> GimmeSpoon [  ] |   ✅    |
+|  2  | [전화번호 목록](https://school.programmers.co.kr/learn/courses/30/lessons/42577), [디스크 컨트롤러](https://school.programmers.co.kr/learn/courses/30/lessons/42627), [단속카메라](https://school.programmers.co.kr/learn/courses/30/lessons/42884) | gyu [  ] <br> GimmeSpoon [  ] |   ✅    |
+|  3  | [주식가격](https://school.programmers.co.kr/learn/courses/30/lessons/42584), [N으로 표현](https://school.programmers.co.kr/learn/courses/30/lessons/42895), [여행경로](https://school.programmers.co.kr/learn/courses/30/lessons/43164)       | gyu [  ] <br> GimmeSpoon [  ] |        |
 
 <br>
 <br>
