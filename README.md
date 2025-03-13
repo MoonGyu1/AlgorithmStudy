@@ -44,10 +44,11 @@
 
 | day | problem                                                                                                                                                                                                                           | commit                         | review |
 |:---:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------|:------:|
-|  1  | [가장 큰 수](https://school.programmers.co.kr/learn/courses/30/lessons/42746), [소수 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/42839), [아이템 줍기](https://school.programmers.co.kr/learn/courses/30/lessons/87694)    | gyu [ ✅ ] <br> GimmeSpoon [  ]  |   ✅    |
+|  1  | [가장 큰 수](https://school.programmers.co.kr/learn/courses/30/lessons/42746), [소수 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/42839), [아이템 줍기](https://school.programmers.co.kr/learn/courses/30/lessons/87694)    | gyu [ ✅ ] <br> GimmeSpoon [  ] |   ✅    |
 |  2  | [전화번호 목록](https://school.programmers.co.kr/learn/courses/30/lessons/42577), [디스크 컨트롤러](https://school.programmers.co.kr/learn/courses/30/lessons/42627), [단속카메라](https://school.programmers.co.kr/learn/courses/30/lessons/42884) | gyu [  ] <br> GimmeSpoon [  ]  |   ✅    |
 |  3  | [주식가격](https://school.programmers.co.kr/learn/courses/30/lessons/42584), [N으로 표현](https://school.programmers.co.kr/learn/courses/30/lessons/42895), [여행경로](https://school.programmers.co.kr/learn/courses/30/lessons/43164)       | gyu [ ✅ ] <br> GimmeSpoon [  ] |    ✅    |
-|  4  | [조이스틱](https://school.programmers.co.kr/learn/courses/30/lessons/42860), [베스트앨범](https://school.programmers.co.kr/learn/courses/30/lessons/42579), [정수 삼각형](https://school.programmers.co.kr/learn/courses/30/lessons/43105)      | gyu [ ✅ ] <br> GimmeSpoon [  ]  |    ✅    |
+|  4  | [조이스틱](https://school.programmers.co.kr/learn/courses/30/lessons/42860), [베스트앨범](https://school.programmers.co.kr/learn/courses/30/lessons/42579), [정수 삼각형](https://school.programmers.co.kr/learn/courses/30/lessons/43105)      | gyu [ ✅ ] <br> GimmeSpoon [  ] |    ✅    |
+|  5  | [등굣길](https://school.programmers.co.kr/learn/courses/30/lessons/42898), [퍼즐 조각 채우기](https://school.programmers.co.kr/learn/courses/30/lessons/84021), [입국심사](https://school.programmers.co.kr/learn/courses/30/lessons/43238)     | gyu [  ] <br> GimmeSpoon [  ]  |    ✅    |
 
 <br>
 <br>
