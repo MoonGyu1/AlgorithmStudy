@@ -49,6 +49,7 @@
 |  3  | [주식가격](https://school.programmers.co.kr/learn/courses/30/lessons/42584), [N으로 표현](https://school.programmers.co.kr/learn/courses/30/lessons/42895), [여행경로](https://school.programmers.co.kr/learn/courses/30/lessons/43164)       | gyu [ ✅ ] <br> GimmeSpoon [  ] |    ✅    |
 |  4  | [조이스틱](https://school.programmers.co.kr/learn/courses/30/lessons/42860), [베스트앨범](https://school.programmers.co.kr/learn/courses/30/lessons/42579), [정수 삼각형](https://school.programmers.co.kr/learn/courses/30/lessons/43105)      | gyu [ ✅ ] <br> GimmeSpoon [  ] |    ✅    |
 |  5  | [등굣길](https://school.programmers.co.kr/learn/courses/30/lessons/42898), [퍼즐 조각 채우기](https://school.programmers.co.kr/learn/courses/30/lessons/84021), [입국심사](https://school.programmers.co.kr/learn/courses/30/lessons/43238)     | gyu [  ] <br> GimmeSpoon [  ]  |    ✅    |
+|  6  | [순위](https://school.programmers.co.kr/learn/courses/30/lessons/49191), [징검다리](https://school.programmers.co.kr/learn/courses/30/lessons/43236), [사칙연산](https://school.programmers.co.kr/learn/courses/30/lessons/1843)                                                                          | gyu [  ] <br> GimmeSpoon [  ]  |    ✅    |
 
 <br>
 <br>
