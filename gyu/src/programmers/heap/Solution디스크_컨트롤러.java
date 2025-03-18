@@ -2,6 +2,7 @@ package src.programmers.heap;
 
 import java.util.*;
 
+// 시간복잡도: O((NlogN)^2)
 class Solution디스크_컨트롤러 {
 	public int solution(int[][] jobs) {
 		// 1. 모든 작업을 (소요 시간 짧은순 -> 요청 시각 빠른순 -> 번호순)으로 정렬
@@ -10,7 +11,6 @@ class Solution디스크_컨트롤러 {
 		for(int i = 0; i < jobs.length; i++) {
 			pq.add(new Job(jobs[i][1], jobs[i][0], i));
 		}
-
 
 		Queue<Job> q = new ArrayDeque<>(); // 요청 시각이 되지 않은 작업을 임시 저장
 		int currentT = 0; // 현재 시각
