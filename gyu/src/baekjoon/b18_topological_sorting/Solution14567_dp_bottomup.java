@@ -6,10 +6,13 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
 /**
  * DP Bottom-Up 방식
+ * f(x) =
  */
 // 시간복잡도: O()
 public class Solution14567_dp_bottomup {
@@ -40,26 +43,42 @@ public class Solution14567_dp_bottomup {
 			prereq[B].add(A);
 		}
 
-		for(int i = 1; i <= N; i++) {
-			minSem[i] = dp(i);
-		}
+		bfs();
 
 		for(int i = 1; i <= N; i++) {
 			System.out.printf("%d ", minSem[i]);
 		}
 	}
 
-	static int dp(int s) {
+	static void bfs() {
+		PriorityQueue<Node> pq = new PriorityQueue<>();
+		for(int i = 1; i <= N; i++) {
+			if(prereq[i].isEmpty()) {
+				pq.add(new Node(0, i, 1));
+			}
+		}
 
+		while(!pq.isEmpty()) {
+			Node n = pq.poll();
+
+			minSem[n.num] = Math.max(minSem[n.num], n.dist);
+
+
+		}
+	}
+
+	static class Node implements Comparator<Node> {
+		int preCnt, num, dist;
+
+		Node(int preCnt, int num, int dist) {
+			this.preCnt = preCnt;
+			this.num = num;
+			this.dist = dist;
+		}
+
+		@Override
+		public int compare(Node a, Node b) {
+			return a.preCnt == b.preCnt ? a.num == b.num ? a.dist - b.dist : a.num - b.num : a.preCnt - b.preCnt;
+		}
 	}
 }
-
-/**
- * 1. DFS로, 선수과목(루트)부터 완전탐색하면 안 되는 이유
- * => 마치 피보나치 수열을 재귀적으로 계산할 때처럼 시간복잡도가 O(N!)이 되기 때문
- *
- * 2. DFS에서 visited 배열로 노드당 1회 방문으로 제한할 수 없는 이유
- * => 어떤 노드를 먼저 방문했는 지에 따라, 거리가 달라지기 때문
- *
- * DFS로 선수 과목부터 탐색할 수는 없고, Top-Down DP처럼 노드당 1회만 계산하기
- */
