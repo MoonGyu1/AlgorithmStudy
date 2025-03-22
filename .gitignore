@@ -3,4 +3,4 @@
 **/out
 *.iml
 **/.DS_Store
-**/**/src/softeer/autoever
+**/**/src/test
