@@ -1,6 +1,6 @@
 import sys
 
-def shortestpath(num_nodes:int, edges:list, src:int, tgt:int):
+def negativecycle(num_nodes:int, edges:list, src:int):
 
     distances = {u : 5_000_000_000 for u in range(1, num_nodes + 1)}
     distances[src] = 0
@@ -12,9 +12,9 @@ def shortestpath(num_nodes:int, edges:list, src:int, tgt:int):
     
     for u, v, t in edges:
         if distances[u] + t < distances[v]:
-            return None
+            return True
 
-    return distances[tgt]
+    return False
 
 TC = int(sys.stdin.readline())
 
@@ -29,10 +29,8 @@ for _ in range(TC):
     for _ in range(W):
         S, E, T = list(map(int, sys.stdin.readline().split()))
         edges.append((S, E, -T))
-    for s, e, t in edges[wh_index:]:
-        d = shortestpath(N, edges, e, s)
-        if d is None or d < -t:
-            print("YES")
-            break
+
+    if negativecycle(N, edges, 1):
+        print("YES")
     else:
         print("NO")
