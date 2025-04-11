@@ -1,7 +1,10 @@
+// level 3
+
 package src.programmers.dfs_bfs;
 
 import java.util.*;
 
+// 시간복잡도: O(N^4)
 class Solution퍼즐_조각_채우기 {
 	static int N;
 
@@ -18,27 +21,23 @@ class Solution퍼즐_조각_채우기 {
 	}
 
 	static class Puzzle {
-		PriorityQueue<Point>[] dirs;
+		ArrayList<Point>[] fragments = new ArrayList[4];
 		boolean used = false;
 
-		Puzzle(PriorityQueue<Point>[] dirs) {
-			this.dirs = dirs;
-		}
+		// 퍼즐의 회전한 모양과 조각이 같은지 확인
+		boolean isSame(ArrayList<Point> fragment) {
+			if(fragment.size() != this.fragments[0].size()) return false;
 
-		boolean isSame(ArrayList<Point> points) {
-			if(points.size() != this.dirs[0].size()) return false;
-
-			points.sort((a, b) -> a.x == b.x ? a.y - b.y : a.x - b.x);
-
-			for(PriorityQueue<Point> dir : dirs) {
+			for(ArrayList<Point> f : fragments) {
 				boolean same = true;
-				for(Point p : points) {
-					Point d = dir.poll();
-					if(d.x != p.x || d.y != p.y) {
+
+				for(int i = 0; i < f.size(); i++) {
+					if(f.get(i).x != fragment.get(i).x || f.get(i).y != fragment.get(i).y) {
 						same = false;
 						break;
 					}
 				}
+
 				if(same) return true;
 			}
 
@@ -46,12 +45,16 @@ class Solution퍼즐_조각_채우기 {
 		}
 	}
 
-	static ArrayList<Point> points;
-	static boolean[][] visited;
-	static List<Puzzle> puzzles;
-
-	static void getFragment(int x, int y, int[][] map, int flag) {
-		points = new ArrayList<>();
+	/**
+	 * BFS로 (x, y)에서 시작하는 조각 구하기
+	 * @param x 시작점 x좌표
+	 * @param y 시작점 y좌표
+	 * @param map game_board or table
+	 * @param flag 0 or 1
+	 * @return 시작점(맨 윗줄, 맨 왼쪽)이 (0, 0)이 되도록 조정한 조각 반환
+	 */
+	static ArrayList<Point> getFragment(int x, int y, int[][] map, int flag, boolean[][] visited) {
+		ArrayList<Point> fragment = new ArrayList<>();
 
 		Queue<Point> q = new ArrayDeque<>();
 
@@ -62,7 +65,7 @@ class Solution퍼즐_조각_채우기 {
 			Point p = q.poll();
 			int cx = p.x, cy = p.y;
 
-			points.add(new Point(cx, cy));
+			fragment.add(new Point(cx, cy));
 
 			for(int d = 0; d < 4; d++) {
 				int nx = cx + dx[d], ny = cy + dy[d];
@@ -76,81 +79,89 @@ class Solution퍼즐_조각_채우기 {
 			}
 		}
 
+		// 시작점 조정
 		int minX = N, minY = N;
-		for(Point point : points) {
+		for(Point point : fragment) {
 			minX = Math.min(minX, point.x);
 			minY = Math.min(minY, point.y);
 		}
 
-		for(Point point : points) {
+		for(Point point : fragment) {
 			point.x -= minX;
 			point.y -= minY;
 		}
+
+		// 추후 비교를 위해 동일한 기준으로 정렬
+		fragment.sort((a, b) -> a.x == b.x ? a.y - b.y : a.x - b.x);
+
+		return fragment;
 	}
 
-	static void makePuzzle(ArrayList<Point> points) {
-		Puzzle puzzle = new Puzzle(new PriorityQueue[4]);
+	/**
+	 * 주어진 fragment를 4 방향 회전한 퍼즐 만들기
+	 */
+	static Puzzle makePuzzle(ArrayList<Point> fragment) {
+		Puzzle puzzle = new Puzzle();
 
 		for(int i = 0; i < 4; i++) {
-			// M은 최대 행
-			int M = 0;
-			for(Point p : points) {
+			int M = 0; // 행 길이
+			for(Point p : fragment) {
 				M = Math.max(M, p.x);
 			}
 			M++;
 
-			PriorityQueue<Point> nPoints = new PriorityQueue<>((a, b) -> a.x == b.x ? a.y - b.y : a.x - b.x);
-			for(Point p : points) {
-				int cx = p.x, cy = p.y;
-				p.x = cy;
-				p.y = M-1-cx;
+			ArrayList<Point> nf = new ArrayList<>(); // 회전한 조각
+			for(Point p : fragment) {
+				int tmp = p.x;
+				p.x = p.y;
+				p.y = M-1-tmp;
 
-				nPoints.add(new Point(p.x, p.y));
+				nf.add(new Point(p.x, p.y));
 			}
 
-			puzzle.dirs[i] = nPoints;
+			nf.sort((a, b) -> a.x == b.x ? a.y - b.y : a.x - b.x);
+			puzzle.fragments[i] = nf;
 		}
 
-		puzzles.add(puzzle);
+		return puzzle;
 	}
 
 	public int solution(int[][] game_board, int[][] table) {
 		N = game_board.length;
-
 		int answer = 0;
+		ArrayList<Puzzle> puzzles = new ArrayList<>();
 
-		// 1. table 돌면서 조각 구하기
-		visited = new boolean[N][N];
-		puzzles = new LinkedList<>();
+		// 1. table 탐색하면서 조각 구하기
+		boolean[][] visited = new boolean[N][N];
 
 		for(int i = 0; i < N; i++) {
 			for(int j = 0; j < N; j++) {
-				// 1) 좌표 우 -> 하로 차례로 순회하면서 차있는 칸 만나면 DFS (방문한 좌표 리스트 반환 - (sx, sy) == (0, 0))
 				if(table[i][j] == 1 && !visited[i][j]) {
-					getFragment(i, j, table, 1);
+					// 1) 차있는 칸을 만나면 DFS
+					ArrayList<Point> f = getFragment(i, j, table, 1, visited);
 
-					// 2) 좌표 리스트로 조각 구하기 (4방향 회전 포함)
-					makePuzzle(points);
+					// 2) 조각으로 퍼즐 만들기
+					puzzles.add(makePuzzle(f));
 				}
 			}
 		}
 
-		// 2. board 돌면서 빈칸 채우기
+		// 2. board 탐색하면서 빈칸 채우고 최대 칸 수 구하기
 		visited = new boolean[N][N];
 
 		for(int i = 0; i < N; i++) {
 			for(int j = 0; j < N; j++) {
-				// 1) 좌표 우->하로 차례로 순회하면서 차있는 칸을 만나면 DFS (방문한 좌표 리스트 반환 - (sx, sy) == (0, 0))
 				if(game_board[i][j] == 0 && !visited[i][j]) {
-					getFragment(i, j, game_board, 0); // points
+					// 1) 빈 칸 만나면 DFS
+					ArrayList<Point> f = getFragment(i, j, game_board, 0, visited);
 
-					// 2) 조각 리스트에 일치하는 조각 있으면 넓이(길이) 더하고, 삭제 (링크드리스트 사용)
+					// 2) 조각과 일치하는 퍼즐이 있는지 확인
 					for(Puzzle p : puzzles) {
 						if(p.used) continue;
 
-						if(p.isSame(points)) {
-							answer += points.size();
-							p.used = true;
+						if(p.isSame(f)) { // 일치하면
+							answer += f.size(); // 칸 수 증가
+							p.used = true; // 퍼즐 사용 처리
 							break;
 						}
 					}
