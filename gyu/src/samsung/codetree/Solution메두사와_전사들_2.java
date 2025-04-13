@@ -48,14 +48,14 @@ public class Solution메두사와_전사들_2 {
 
 	/**
 	 * 두 점 사이의 맨하튼 거리 계산
- 	 */
+	 */
 	static int calculateDistance(Point a, Point b) {
 		return Math.abs(a.x - b.x) + Math.abs(a.y - b.y);
 	}
 
 	/**
 	 * 다익스트라 - (x, y)부터 다른 칸까지의 최단 거리 계산
- 	 */
+	 */
 	static int[][] computeDistances(int x, int y, int N, int[][] map) {
 		int[][] dist = new int[N][N];
 		for(int i = 0; i < N; i++) {
