@@ -5,3 +5,8 @@
 **/.DS_Store
 **/**/src/test
 .vscode
+.classpath
+.metadata
+.project
+.settings
+*.class
