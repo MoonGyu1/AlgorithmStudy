@@ -23,14 +23,15 @@ public class Solution1068_2 {
 	 * @return from 노드부터 시작하는 서브트리의 리프 노드 개수
 	 */
 	static int dfs(int from, int[] parents, int deleted) {
-		if(from == deleted) return 0; // root가 삭제된 경우 예외 처리
+		// 1. root 노드가 삭제된 경우 예외 처리
+		if(from == deleted) return 0;
 		
-		// 아니면 방문 안 한 자식 노드 순회
+		// 2. 자식 노드 순회
 		int cnt = 0;
 		boolean isLeaf = true;
 		
 		for(int i = 0; i < parents.length; i++) {
-			if(parents[i] == from && i != deleted) { // 주의: 삭제된 경우 방문하면 안 됨 (자식 노드가 있는 것으로 처리되므로)
+			if(parents[i] == from && i != deleted) { // 주의: 삭제된 노드인 경우 방문하면 안 됨 (자식 노드가 있는 것으로 처리되므로)
 				isLeaf = false;
 				cnt += dfs(i, parents, deleted);
 			}
