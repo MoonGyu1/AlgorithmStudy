@@ -52,7 +52,3 @@ def solution(storage, requests):
         print(leftover)
     
     return leftover
-
-if __name__ == "__main__":
-    print(solution(["AZWQY", "CAABX", "BBDDA", "ACACA"], ["A", "BB", "A"]))
-    print(solution(["HAH", "HBH", "HHH", "HAH", "HBH"], ["C", "B", "B", "B", "B", "H"]))
